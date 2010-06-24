@@ -9,11 +9,15 @@
     %style
       :sass
 
-  %body
+  %body.bp.two-col
     #container
       #header
         %h2 instead of school
       #sidebar
+        %ul#menu
+          %li= link_to "events", events_url
+          %li= link_to "places", places_url
+          %li= link_to "organizations", organizations_url
         = yield :sidebar
       #content
         = yield
