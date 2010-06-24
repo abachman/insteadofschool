@@ -1,8 +1,10 @@
 %h1 Editing place
 - form_for(@place) do |f|
   = f.error_messages
+  = render :partial => 'form', :locals => {:f => f}
+
   %p
     = f.submit 'Update'
 = link_to 'Show', @place
 |
-\#{link_to 'Back', places_path}
+= link_to 'Back', places_path

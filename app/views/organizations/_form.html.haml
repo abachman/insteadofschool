@@ -1,0 +1,18 @@
+%table
+  %tr
+    %td= f.label :name
+    %td= f.text_field :name
+  %tr
+    %td= f.label :reference
+    %td= f.text_field :reference
+  %tr
+    %td= f.label :place_id
+    %td
+      = f.select(:place_id,
+                 options_from_collection_for_select(Place.all, :id, :name, f.object.place ? f.object.place.id : ''),
+                 :include_blank => "None")
+      = link_to "create a new place", new_place_url, :target => '_blank'
+  %tr
+    %td= f.label :description
+    %td= f.text_area :description
+

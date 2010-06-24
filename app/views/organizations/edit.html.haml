@@ -1,8 +1,9 @@
 %h1 Editing organization
 - form_for(@organization) do |f|
   = f.error_messages
+  = render :partial => 'form', :locals => {:f => f}
   %p
     = f.submit 'Update'
 = link_to 'Show', @organization
 |
-\#{link_to 'Back', organizations_path}
+= link_to 'Back', organizations_path

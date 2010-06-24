@@ -2,7 +2,9 @@ class CreateOrganizations < ActiveRecord::Migration
   def self.up
     create_table :organizations do |t|
       t.string :name
+      t.string :reference
       t.text   :description
+      t.string :audience
       t.integer :place_id
 
       t.timestamps

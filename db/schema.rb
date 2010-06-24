@@ -9,14 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100624014229) do
-
-  create_table "audiences", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20100624033546) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -24,23 +17,39 @@ ActiveRecord::Schema.define(:version => 20100624014229) do
     t.datetime "updated_at"
   end
 
+  create_table "categories_events", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories_organizations", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories_places", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "events", :force => true do |t|
     t.string   "date"
     t.integer  "place_id"
-    t.integer  "audience_id"
     t.integer  "organization_id"
     t.decimal  "cost",            :precision => 21, :scale => 5
     t.string   "name"
+    t.string   "audience"
     t.text     "description"
     t.string   "reference"
-    t.string   "audience"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "organizations", :force => true do |t|
     t.string   "name"
+    t.string   "reference"
     t.text     "description"
+    t.string   "audience"
     t.integer  "place_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -51,8 +60,11 @@ ActiveRecord::Schema.define(:version => 20100624014229) do
     t.string   "address_street"
     t.string   "address_street_two"
     t.string   "address_zip"
+    t.string   "location"
+    t.string   "reference"
+    t.string   "audience"
     t.text     "description"
-    t.integer  "audience_id"
+    t.integer  "location_id"
     t.decimal  "cost",               :precision => 21, :scale => 5
     t.datetime "created_at"
     t.datetime "updated_at"

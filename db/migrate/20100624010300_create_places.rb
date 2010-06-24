@@ -5,8 +5,11 @@ class CreatePlaces < ActiveRecord::Migration
       t.string :address_street
       t.string :address_street_two
       t.string :address_zip
+      t.string :location
+      t.string :reference
+      t.string :audience
       t.text   :description
-      t.integer :audience_id
+      t.integer :location_id
       t.decimal :cost, :precision => 21, :scale => 5
 
       t.timestamps

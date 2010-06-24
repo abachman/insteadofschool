@@ -1,7 +1,7 @@
-%h1 New organization
-- form_for(@organization) do |f|
+%h1 New category
+- form_for(@category) do |f|
   = f.error_messages
   = render :partial => 'form', :locals => {:f => f}
   %p
     = f.submit 'Create'
-= link_to 'Back', organizations_path
+= link_to 'Back', categories_path

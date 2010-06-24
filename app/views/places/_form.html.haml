@@ -1,0 +1,18 @@
+- unless params[:return_to].nil?
+  = hidden_field :return_to, params[:return_to]
+%table
+  %tr
+    %td= f.label :name
+    %td= f.text_field :name
+  %tr
+    %td= f.label :location
+    %td= f.text_field :location
+  %tr
+    %td= f.label :cost
+    %td= f.text_field :cost
+  %tr
+    %td= f.label :reference, "Reference link"
+    %td= f.text_field :reference
+  %tr
+    %td= f.label :description
+    %td= f.text_area :description

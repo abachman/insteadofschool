@@ -534,7 +534,7 @@ body.two-col #sidebar {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 150px;
+  width: 110px;
 }
 /* line 138, ../../../../../.rvm/gems/ree-1.8.7-2010.01@insteadofschool/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body.two-col #sidebar {
@@ -543,31 +543,38 @@ body.two-col #sidebar {
 /* line 38, ../../../app/stylesheets/screen.sass */
 body.two-col #sidebar ul#menu {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
-/* line 40, ../../../app/stylesheets/screen.sass */
+/* line 42, ../../../app/stylesheets/screen.sass */
+body.two-col #sidebar ul#menu li {
+  padding-left: 0;
+  margin-left: 0;
+}
+/* line 45, ../../../app/stylesheets/screen.sass */
 body.two-col #content {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 790px;
+  width: 830px;
 }
 /* line 138, ../../../../../.rvm/gems/ree-1.8.7-2010.01@insteadofschool/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body.two-col #content {
   overflow-x: hidden;
 }
 
-/* line 47, ../../../app/stylesheets/screen.sass */
+/* line 52, ../../../app/stylesheets/screen.sass */
 table.listing {
   padding: 0;
   margin: 0;
 }
-/* line 50, ../../../app/stylesheets/screen.sass */
+/* line 55, ../../../app/stylesheets/screen.sass */
 table.listing th {
   border-bottom: 1px solid black;
   padding: 4px 2px;
   background: #eeeeee;
 }
-/* line 55, ../../../app/stylesheets/screen.sass */
+/* line 60, ../../../app/stylesheets/screen.sass */
 table.listing tr td {
   padding: 4px 2px;
 }
