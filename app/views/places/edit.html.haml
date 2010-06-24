@@ -1,0 +1,8 @@
+%h1 Editing place
+- form_for(@place) do |f|
+  = f.error_messages
+  %p
+    = f.submit 'Update'
+= link_to 'Show', @place
+|
+\#{link_to 'Back', places_path}

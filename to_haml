@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+class ToHaml
+  def initialize(path)
+    @path = path
+  end
+
+  def convert!
+    Dir["#{@path}/**/*.erb"].each do |file|
+      puts "converting #{file}"
+      # run html2haml on the input file in erb mode with strict parsing
+      # on the input (xhtml mode)
+      `html2haml -ex #{file} #{file.gsub(/\.erb$/, '.haml')} && rm #{file}`
+    end
+  end
+end
+
+path = File.join(File.dirname(__FILE__), 'app', 'views')
+ToHaml.new(path).convert!

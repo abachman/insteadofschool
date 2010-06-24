@@ -1,0 +1,8 @@
+%h1 Editing organization
+- form_for(@organization) do |f|
+  = f.error_messages
+  %p
+    = f.submit 'Update'
+= link_to 'Show', @organization
+|
+\#{link_to 'Back', organizations_path}

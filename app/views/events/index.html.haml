@@ -1,0 +1,20 @@
+%h1 Listing events
+%table.listing
+  %tr
+    %th NAME
+    %th DATE
+    %th REFERENCE
+    %th DESCRIPTION
+    %th{:colspan => 3} CONTROLS
+
+  - @events.each do |event|
+    %tr
+      %td= event.name
+      %td= event.date
+      %td= link_to event.reference, event.reference
+      %td= event.description
+      %td= link_to 'Show', event
+      %td= link_to 'Edit', edit_event_path(event)
+      %td= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete
+%br
+= link_to 'New event', new_event_path

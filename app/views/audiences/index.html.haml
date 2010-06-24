@@ -1,0 +1,10 @@
+%h1 Listing audiences
+%table
+  %tr
+  - @audiences.each do |audience|
+    %tr
+      %td= link_to 'Show', audience
+      %td= link_to 'Edit', edit_audience_path(audience)
+      %td= link_to 'Destroy', audience, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'New audience', new_audience_path
