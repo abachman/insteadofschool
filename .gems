@@ -1,6 +1,7 @@
 # .gems generated gem export file. Note that any env variable settings 
 # will be missing. Append these after using a ';' field separator
 rails -v2.3.8
+pg
 haml -v3.0.13
 compass -v0.10.2
 
